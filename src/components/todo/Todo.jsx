@@ -30,27 +30,32 @@ export default function Todo({ todo, setTodos }) {
         ) : (
           <li>{todo.text}</li>
         )}
-        <input type="checkbox" onChange={handleCheck} />
+        <div className="action-div">
+          <input type="checkbox" onChange={handleCheck} />
 
-        <button
-          onClick={
-            todo.id === editId
-              ? () => {
-                  setTodos((prevTodos) => [
-                    ...prevTodos.map((item) =>
-                      item.id === editId ? { ...item, text: editText } : item
-                    ),
-                  ]);
-                  setEditId();
-                }
-              : () => {
-                  setEditId(todo.id), setEdiText(todo.text);
-                }
-          }
-        >
-          {todo.id === editId ? "save" : "edit"}
-        </button>
-        <button onClick={handleDelete}>Delete</button>
+          <button
+            className="edit-btn"
+            onClick={
+              todo.id === editId
+                ? () => {
+                    setTodos((prevTodos) => [
+                      ...prevTodos.map((item) =>
+                        item.id === editId ? { ...item, text: editText } : item
+                      ),
+                    ]);
+                    setEditId();
+                  }
+                : () => {
+                    setEditId(todo.id), setEdiText(todo.text);
+                  }
+            }
+          >
+            {todo.id === editId ? "Save" : "Edit"}
+          </button>
+          <button className="delete-btn" onClick={handleDelete}>
+            Delete
+          </button>
+        </div>
       </div>
     </>
   );

@@ -1,5 +1,25 @@
 .list {
   display: flex;
+  justify-content: space-between;
   gap: 6px;
   margin-bottom: 10px;
+}
+.action-div {
+  display: flex;
+  gap: 8px;
+}
+button {
+  cursor: pointer;
+}
+.delete-btn {
+  border: none;
+  padding: 3px 10px;
+  background-color: rgb(174, 36, 36);
+  border-radius: 5px;
+}
+.edit-btn {
+  border: none;
+  padding: 3px 10px;
+  background-color: rgb(46, 46, 238);
+  border-radius: 5px;
 }

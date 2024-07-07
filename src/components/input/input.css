@@ -1,0 +1,11 @@
+.input-div {
+  display: flex;
+  justify-content: space-evenly;
+}
+.add-btn {
+  border: none;
+  padding: 3px 20px;
+  border-radius: 5px;
+  background-color: green;
+  margin-left: 9px;
+}

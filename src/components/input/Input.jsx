@@ -1,4 +1,5 @@
 import React from "react";
+import "./input.css";
 
 export default function Input({ setTodos, inputValue, setInputValue }) {
   const handleInput = (event) => {
@@ -14,13 +15,17 @@ export default function Input({ setTodos, inputValue, setInputValue }) {
 
   return (
     <>
-      <input
-        value={inputValue}
-        onChange={handleInput}
-        type="text"
-        placeholder="Enter To-Do . . ."
-      />
-      <button onClick={handleAdd}>Add</button>
+      <div className="input-div">
+        <input
+          value={inputValue}
+          onChange={handleInput}
+          type="text"
+          placeholder="Enter To-Do . . ."
+        />
+        <button className="add-btn" onClick={handleAdd}>
+          Add
+        </button>
+      </div>
     </>
   );
 }
