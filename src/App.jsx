@@ -8,16 +8,16 @@ function App() {
   const [inputValue, setInputValue] = useState("");
 
   return (
-    <>
+    <div className="container">
       {todos.map((todo) => (
-        <Todo key={todo.id} todo={todo} setTodos={setTodos} todos={todos} />
+        <Todo key={todo.id} todo={todo} setTodos={setTodos} />
       ))}
       <Input
         setTodos={setTodos}
         inputValue={inputValue}
         setInputValue={setInputValue}
       />
-    </>
+    </div>
   );
 }
 

@@ -18,7 +18,7 @@ export default function Input({ setTodos, inputValue, setInputValue }) {
         value={inputValue}
         onChange={handleInput}
         type="text"
-        placeholder="Enter To-Do"
+        placeholder="Enter To-Do . . ."
       />
       <button onClick={handleAdd}>Add</button>
     </>
